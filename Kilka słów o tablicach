@@ -55,11 +55,13 @@ Operacje na tablicach
 [1,2,3,5,6] - [1,2,3]
 => [5,6]
 
-<< - tablica1 << obiekt - dodaje na końcu tablicy podany obiekt i tworzy nową tablicę, dlatego tą operację można wykonać wielokrotnie.
+<< - tablica1 << obiekt - dodaje na końcu tablicy podany obiekt i tworzy nową tablicę, dlatego tą operację 
+można wykonać wielokrotnie.
 [1,2,3] << "c" << "a" << [5,6]
 => [1,2,3,c,a,5,6]
 
-<=> - tablica1 <=> tablica2 - zwraca wartość -1,0 lub 1 jeśli: pierwsza tablica jest mniejsza, są równe, albo pierwsza jest większa.
+<=> - tablica1 <=> tablica2 - zwraca wartość -1,0 lub 1 jeśli: pierwsza tablica jest mniejsza, są równe,
+albo pierwsza jest większa.
 [1,2,3] <=> [1,2]
 => 1
 
@@ -79,7 +81,7 @@ Operacje na tablicach
 
 === - tablica1 === tablica2 - tak samo jak "=="
 
-tablica[indeks] lub tablica[start,długość] lub tablica[zakres] - zwraca element o podanym indeksie, nową tablicę 
+[ ] - tablica[indeks] lub tablica[start,długość] lub tablica[zakres] - zwraca element o podanym indeksie, nową tablicę 
 zaczynającą się w podanym punkcie i o długości podanej w parametrze, nową tablicę z wartościami z danego zakresu 
 lub nil jeśli podaliśmy indeks spoza zakresu
 a = [ "a", "b", "c", "d", "e" ]
@@ -104,3 +106,5 @@ a[6..10]
 
 a[-3, 3]
 => ["c", "d", "e"]
+
+[]= - tablica[indeks] lub tablica[start,długość] lub tablica[zakres] - 
