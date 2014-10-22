@@ -273,3 +273,28 @@ a = [ "q", "r", "s", "t" ]
 a.first
 => "q"
 
+flatten - tablica.flatten - zwraca nową tablicę spłaszczając ją do jednego wymiaru (rekurencyjnie). 
+Z każdego elementu który jest tablicą wyciąga elementy do nowej tablicy.
+s = [ 1, 2, 3 ] 	
+=> [1, 2, 3]
+
+t = [ 4, 5, 6, [7, 8] ] 
+=> [4, 5, 6, [7, 8]]
+
+a = [ s, t, 9, 10 ] 	
+=> [[1, 2, 3], [4, 5, 6, [7, 8]], 9, 10]
+
+a.flatten 	
+=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+flatten! - tablica.flatten! - to samo co flatten, ale modyfikuje aktualną tabelę. Jeśli nie przeprowadzono
+zmian zwraca nil.
+
+include? -	tablica.include?(obiekt) - zwraca true jeśli w tablicy odnaleziono dany obiekt, w przeciwnym razie false.
+
+a = [ "a", "b", "c" ]
+a.include?("b") 	
+=> true
+
+a.include?("z") 	
+=> false
