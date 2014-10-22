@@ -213,3 +213,31 @@ a.delete("z")
 a.delete("z") { "not found" } 	
 => "not found"
 
+delete_at - tablica.delete_at(indeks) - usuwa element o podanym indeksie i zwraca go.
+Jeśli indeks jest poza zakresem zwraca nil.
+a = %w( ant bat cat dog )
+a.delete_at(2) 	
+=> "cat"
+
+a 
+=> ["ant", "bat", "dog"]
+
+a.delete_at(99) 	
+=> nil
+
+delete_if - tablica.delete_if {| | blok } - usuwa wszystkie elementy tablicy dla których blok zwrócił wartość true.
+a = [ "a", "b", "c" ]
+a.delete_if {|x| x >= "b" }
+=> ["a"]
+
+each - tablica.each {| pozycja | blok } - wykonuje blok pojedynczo dla każdego elementu tablicy,
+podając ten element jako parametr.
+a = [ "a", "b", "c" ]
+a.each {|x| print x, " -- " }
+
+wynikiem jest:
+a -- b -- c --
+
+ each_index -	tablica.each_index {|indeks|blok } - to samo co each, ale podaje indeks elementu zamiast samego elementu.
+ 
+ 
