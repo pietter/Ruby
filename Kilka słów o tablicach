@@ -298,3 +298,12 @@ a.include?("b")
 
 a.include?("z") 	
 => false
+
+index -	tablica.index(obiekt) - zwraca indeks elementu w tablicy który jest taki jak obiekt, 
+albo nil jeśli takiego nie ma.
+a = [ "a", "b", "c" ]
+a.index("b") 	
+=> 1
+
+a.index("z") 	
+=> nil
