@@ -172,7 +172,7 @@ a.collect {|x| x + "!" }
 a
 => ["a", "b", "c", "d"]
 
-collect! - tablica.collect!{| obiekt | block } - modyfikuje tablice przechodząc przez jej każde pole i wykonując
+collect! - tablica.collect!{| obiekt | block } - zwraca tablice przechodząc przez jej każde pole i wykonując
 polecenia w bloku.
 a = [ "a", "b", "c", "d" ]
 a.collect! {|x| x + "!" }
@@ -180,4 +180,36 @@ a.collect! {|x| x + "!" }
 
 a
 => ["a!", "b!", "c!", "d!"]
+
+compact - tablica.compact - zwraca nową tablicę z usuniętymi pustymi polami (nil).
+[ "a", nil, "b", nil, "c", nil ].compact
+=> ["a","b","c"]
+
+compact! - tablica.compact! - to samo co compact, ale modyfikuje daną tablicę. Jeśli nic nie zmieniono to zwraca nil.
+[ "a", nil, "b", nil, "c" ].compact! 	
+=> ["a", "b", "c"]
+
+[ "a", "b", "c" ].compact! 
+=> nil
+
+concat - tablica1.concat(tablica2) - dodaje do tablicy elementy z drugiej tablicy.
+[ "a", "b" ].concat( ["c", "d"] ) 
+=> ["a", "b", "c", "d"]
+
+delete - tablica.delete(obiekt) lub tablica.delete(obiekt) {| | blok} - usuwa wszystkie elementy tablicy
+które są równe obiektowi.Zwraca podany obiekt lub nil jeśli nie znaleziono podanego obiektu. 
+Można opcjonalnie dodać blok czynności do wykonania. 
+
+a = [ "a", "b", "b", "b", "c" ]
+a.delete("b") 	
+=> "b"
+
+a 	
+=> ["a", "c"]
+
+a.delete("z") 	
+=>	nil
+
+a.delete("z") { "not found" } 	
+=> "not found"
 
