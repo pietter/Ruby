@@ -325,3 +325,70 @@ poprzez "Napis".
 
 [ "a", "b", "c" ].join("-") 	
 => "a-b-c"
+
+last -	tablica.last - zwraca ostatni element tablicy, albo nil jeśli tablica jest pusta.
+[ "w", "x", "y", "z" ].last
+=> "z"
+
+length - tablica.length - zwraca długość tablicy. Może być zerem.
+[ 1, 2, 3, 4, 5 ].length
+=> 5
+
+nitems -	tablica.nitems - zwraca ilość elementó któe nie są nilem, może zwrócić zero.
+[ 1, nil, 3, nil, 5 ].nitems
+=> 3
+
+pop 	tablica.pop - usuwa i zwraca ostatni element tablicy. Zwraca nil jeśli tablica była pusta.
+a = [ "a", "m", "z" ]
+a.pop 	
+=> "z"
+
+a 	
+=> ["a", "m"]
+
+push -	tablica.push( [obiekt] ) - dodaje do tablicy wszystko zawarte w obiekcie i zwraca jako nową tablicę.
+a = [ "a", "b", "c" ]
+a.push("d", "e", "f") 	
+=> ["a", "b", "c", "d", "e", "f"]
+
+rassoc -	tablica.rassoc(klucz) - przeszukuje tablicę której elementy też są tablicami. Porównuje klucz z drugim
+elementem każdej zawartej tablicy używając do tego "==". Zwraca pierwszą tablicę która spełni warunek.
+a = [ [ 1, "one"], [2, "two"], [3, "three"], ["ii", "two"] ]
+a.rassoc("two") 	
+=> [2, "two"]
+
+a.rassoc("four") 
+=> nil
+
+reject! -	tabica.reject! {| | blok } - to samo co delete_if ale zwraca nil jeśli nie wprowadzono żadnych zmian.
+
+replace -	tablica1.replace(tablica2) - zamienia elementy tablicy1 na elementy tablicy2. Wydłużając ją lub skracając
+w zależności od potrzeb.
+a = [ "a", "b", "c", "d", "e" ]
+a.replace( [ "x", "y", "z" ] ) 	
+=> ["x", "y", "z"]
+
+a 
+=> ["x", "y", "z"]
+
+reverse -	tablica.reverse - zwraca nową tablicę w odwrotnej kolejności.
+[ "a", "b", "c" ].reverse 	
+=>	["c", "b", "a"]
+
+reverse! -	tablica.reverse! - to samo co reverse, ale zwraca też nil jeśli długość tablicy wynosi 1 lub 0.
+
+reverse_each -	tablica.reverse_each {| | blok } - to samo co each, ale przechodzi po tablicy od tyłu.
+a = [ "a", "b", "c" ]
+a.reverse_each {|x| print x, " " }
+
+wynikiem jest:
+c b a
+
+rindex - tablica.rindex(obiekt) - zwraca indeks ostatniego elementu w tablicy który był taki jak podany obiekt.
+Zwraca nil jeśli nie odnaleziono takiego elementu.
+a = [ "a", "b", "b", "b", "c" ]
+a.rindex("b") 	
+=> 3
+
+a.rindex("z") 	
+=> nil
