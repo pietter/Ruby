@@ -107,4 +107,45 @@ a[6..10]
 a[-3, 3]
 => ["c", "d", "e"]
 
-[]= - tablica[indeks] lub tablica[start,długość] lub tablica[zakres] - 
+[]= - tablica[indeks] lub tablica[start,długość] lub tablica[zakres] - ustawia wartość w polu o podanym indeksie,
+zakresie. Jeśli podany indeks jest większy niż obecna długość tablicy, to tablica jest automatycznie zwiększana.
+a = Array.new
+=> []
+
+a[4] = "4";  
+=> [ nil, nil, nil, nil, 4]
+
+a[0, 3] = [ 'a', 'b', 'c' ];
+=> ["a", "b", "c", nil, "4"]
+
+a[1..2] = [ 1, 2 ];  
+=> ["a", 1, 2, nil, "4"]
+
+a[0, 2] = "?";
+=> ["?", 2, nil, "4"]
+
+a[0..2] = "A"; 
+=> ["A", "4"]
+
+a[-1] = "Z";
+=> ["A", "Z"]
+
+a[1..-1] = nil;
+=> ["A"]
+
+| - tablica1|tablica2 - łączy ze sobą 2 tablice bez powtórzeń.
+["a","b","c"] | ["c","d","a"] 	
+=>	["a", "b", "c", "d"]
+
+assoc - tablica.assoc(obiekt) - Przeszukuje tablice, której elementami są inne tablice w poszukiwaniu danego obiektu.
+Zwraca pierwszą tablicę w której odnaleziono szukany obiekt, lub nil jeśli nie znaleziono go wcale.
+
+s1 = [ "colors", "red", "blue", "green" ]
+s2 = [ "letters", "a", "b", "c" ]
+s3 = "foo"
+a  = [ s1, s2, s3 ]
+a.assoc("letters") 	
+=> ["letters", "a", "b", "c"]
+
+a.assoc("foo") 
+=> nil
