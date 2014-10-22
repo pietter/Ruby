@@ -373,7 +373,7 @@ a
 
 reverse -	tablica.reverse - zwraca nową tablicę w odwrotnej kolejności.
 [ "a", "b", "c" ].reverse 	
-=>	["c", "b", "a"]
+=> ["c", "b", "a"]
 
 reverse! -	tablica.reverse! - to samo co reverse, ale zwraca też nil jeśli długość tablicy wynosi 1 lub 0.
 
@@ -392,3 +392,38 @@ a.rindex("b")
 
 a.rindex("z") 	
 => nil
+
+shift -	tablica.shift - zwraca pierwszy element tablicy i usuwa go.
+args = [ "-m", "-q", "filename" ]
+args.shift 
+=> "-m"
+
+args
+=> ["-q", "filename"]
+
+size -	tablica.size - to samo co length.
+
+sort -	tablica.sort , tablica.sort{|a,b|blok} - zwraca nową tablicę stworzoną poprzez sortowanie tablicy. Porównania
+podczas sortowania zostaną przeprowadzonę poprzez "<=>" albo przez opcjonalny blok kodu.
+a = [ "d", "a", "e", "c", "b" ]
+a.sort 	
+=> ["a", "b", "c", "d", "e"]
+
+a.sort {|x,y| y <=> x } 	
+=> ["e", "d", "c", "b", "a"]
+
+sort! - tablica.sort! - to samo co sort, ale operuje na tablicy (nie zwraca nowej). Tablica jest "zamrożona" podczas
+sortowania.
+
+to_a - tablica.to_a - zwraca tablicę.
+
+to_ary - synonim to_a
+
+to_s - tablica.to_s - zwraca tablice w postaci napisu.
+[ "a", "e", "i", "o" ].to_s 	
+=> "aeio"
+
+uniq -	tablica.uniq - zwraca nową tablicę bez powtarzających się wartości.
+a = [ "a", "a", "b", "b", "c" ]
+a.uniq 	
+=> ["a", "b", "c"]
