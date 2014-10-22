@@ -291,7 +291,6 @@ flatten! - tablica.flatten! - to samo co flatten, ale modyfikuje aktualną tabel
 zmian zwraca nil.
 
 include? -	tablica.include?(obiekt) - zwraca true jeśli w tablicy odnaleziono dany obiekt, w przeciwnym razie false.
-
 a = [ "a", "b", "c" ]
 a.include?("b") 	
 => true
@@ -307,3 +306,22 @@ a.index("b")
 
 a.index("z") 	
 => nil
+
+indexes -	tablica.indexes( i1, i2, ... iN ) - zwraca nową tablicę złożoną z elementów o podanych indeksach.
+Może zwrócić nil jeśli podamy indeks spoza zakresu.
+a = [ "a", "b", "c", "d", "e", "f", "g" ]
+a.indexes(0, 2, 4) 	
+=> ["a", "c", "e"]
+
+a.indexes(0, 2, 4, 12) 	
+=> ["a", "c", "e", nil]
+
+indices - tablica.indices - to smao co indexes.
+
+join -	tablica.join("Napis") - zwraca napis powstały po ponwersji każdego elementu tablicy do napisu, rozdzielonego 
+poprzez "Napis".
+[ "a", "b", "c" ].join 	
+=> "abc"
+
+[ "a", "b", "c" ].join("-") 	
+=> "a-b-c"
