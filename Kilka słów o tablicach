@@ -10,7 +10,7 @@ Metody które możemy stosować przy tablicach:
 na przykład:
 
 Array.[]( 1, 'a', /^A/ )
->>[1, "a", /^A/]
+=>[1, "a", /^A/]
 
 Jak widzimy tablice nie muszą przechowywać tylko jednego typu danych. Każde pole może być innego typu.
 Tą samą operację możemy zapisać również jako:
@@ -23,10 +23,26 @@ Nie musimy nawet używać jakby się wydawało kluczowego słówka "Array"
 new - zwraca nową tablicę, w któej opcjonalnie możemy zadeklarować jej wielkość, a nawet wartość domyślną.
 
 Array.new - pusta tablica, nie wypełniona.
->> []
+=>[]
 
 Array.new(2) - pusta tablica z 2 pustymi (nil) polami.
->> [nil,nil]
+=>[nil,nil]
 
 Array.new(5, "A") - 5 elementowa tablica wypełniona w każdym polu dużą literą A.
->>["A", "A", "A", "A", "A"]
+=>["A", "A", "A", "A", "A"]
+----------------------------------------------------------------------------------------------------------------
+
+
+Operacje na tablicach
+----------------------------------------------------------------------------------------------------------------
+& - tablica1 & tablica2 - zwraca nową tablicę składającą się z części wspólnej tablicy 1 i 2. Bez powtórzeń.
+[ 1, 1, 3, 5 ] & [ 1, 2, 3 ] 
+=>[1, 3]
+
+* - tablica * liczba - zwraca tablicę pomnożoną o daną liczbę.
+[ 1, 2, 3 ] * 3
+=>[1, 2, 3, 1, 2, 3, 1, 2, 3]
+
+* - tablica * napis - zwraca tablicę w której między polami oryginalnej został dodany podany napis.
+[1,2,3,4,5] * test
+=> "1test2test3test4test5"
