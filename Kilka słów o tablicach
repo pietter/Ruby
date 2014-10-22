@@ -70,4 +70,37 @@ Operacje na tablicach
 =>0
 
 
+== - tablica1 == tablica2 - zwraca wartość true jeśli dwie tablice są sobie równe, bądź false jeśli nie.
+[1,2,3] == [1,2,3]
+=> true
 
+[1,2,3] == [1,2]
+=> false
+
+=== - tablica1 === tablica2 - tak samo jak "=="
+
+tablica[indeks] lub tablica[start,długość] lub tablica[zakres] - zwraca element o podanym indeksie, nową tablicę 
+zaczynającą się w podanym punkcie i o długości podanej w parametrze, nową tablicę z wartościami z danego zakresu 
+lub nil jeśli podaliśmy indeks spoza zakresu
+a = [ "a", "b", "c", "d", "e" ]
+
+a[2] +  a[0] + a[1]
+=> "cab"
+
+a[6]
+=> nil
+
+a[1, 2]
+=> ["b", "c"]
+
+a[1..3]
+=> ["b", "c", "d"]
+
+a[4..7]
+=> ["e"]
+
+a[6..10]
+=> nil
+
+a[-3, 3]
+=> ["c", "d", "e"]
