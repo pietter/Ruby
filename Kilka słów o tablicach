@@ -5,6 +5,7 @@ pole z indeksem -1 będzie oznaczało ostatnie pole w tablicy,
 
 
 Metody które możemy stosować przy tablicach:
+----------------------------------------------------------------------------------------------------------------
 [ ] – nawiasy kwadratowe. Pozwalają wypełnić nowo powstałą tablicę konkretnymi wartościami, 
 na przykład:
 
@@ -18,3 +19,14 @@ Array[ 1, 'a', /^A/ ]
 Nie musimy nawet używać jakby się wydawało kluczowego słówka "Array"
 
 [ 1, 'a', /^A/ ]
+
+new - zwraca nową tablicę, w któej opcjonalnie możemy zadeklarować jej wielkość, a nawet wartość domyślną.
+
+Array.new - pusta tablica, nie wypełniona.
+>> []
+
+Array.new(2) - pusta tablica z 2 pustymi (nil) polami.
+>> [nil,nil]
+
+Array.new(5, "A") - 5 elementowa tablica wypełniona w każdym polu dużą literą A.
+>>["A", "A", "A", "A", "A"]
