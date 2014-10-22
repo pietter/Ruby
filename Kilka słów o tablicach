@@ -149,3 +149,35 @@ a.assoc("letters")
 
 a.assoc("foo") 
 => nil
+
+at - tablica.at(indeks) - zwraca element o podanym indeksie. Ujemny indeks oznacza pozycję od końca tablicy.
+a = [ "a", "b", "c", "d", "e" ]
+a.at(0) 
+=> "a"
+
+a.at(-1) 
+=> "e"
+
+clear - tablica.clear - czyści wszystkie elementy tablicy
+a = [ "a", "b", "c", "d", "e" ]
+a.clear
+=> []
+
+collect - tablica.collect{| obiekt | blok }  - zwraca nową tablicę i wywołuje się dla każdego elementu tablicy
+wykonując wykonując instrukcje podane w bloku.
+a = [ "a", "b", "c", "d" ]
+a.collect {|x| x + "!" }
+=> ["a!", "b!", "c!", "d!"]
+
+a
+=> ["a", "b", "c", "d"]
+
+collect! - tablica.collect!{| obiekt | block } - modyfikuje tablice przechodząc przez jej każde pole i wykonując
+polecenia w bloku.
+a = [ "a", "b", "c", "d" ]
+a.collect! {|x| x + "!" }
+=>["a!", "b!", "c!", "d!"]
+
+a
+=> ["a!", "b!", "c!", "d!"]
+
