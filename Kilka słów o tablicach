@@ -238,6 +238,38 @@ a.each {|x| print x, " -- " }
 wynikiem jest:
 a -- b -- c --
 
- each_index -	tablica.each_index {|indeks|blok } - to samo co each, ale podaje indeks elementu zamiast samego elementu.
+each_index -	tablica.each_index {|indeks|blok } - to samo co each, ale podaje indeks elementu zamiast samego elementu.
  
- 
+empty? -	tablica.empty? - zwraca wartość true jeśli tablica jest pusta, albo false jeśli nie.
+[].empty?
+=> true
+
+eql? - tablica1.eql?(tablica2) - zwraca wartość true, jeśli tablice mają tą samą długość, a odpowiadające sobie 
+wartości są równe. W przeciwnym przypadku false.
+[ "a", "b", "c" ].eql?(["a", "b", "c"])
+=> true
+
+[ "a", "b", "c" ].eql?(["a", "b"])
+=> false
+
+[ "a", "b", "c" ].eql?(["b", "c", "d"])
+=> false
+
+fill - tablica.fill(obiekt), tablica.fill(obiekt,start[,długość]), tablica.fill(obiekt,zakres) - ustawia wyznaczone
+elementy tablicy jako wartość obiektu. Podanie nil jako startu jest równoznaczny z zerem, długość nil jest
+równoznaczna z tablica.length (długością całej tablicy).
+a = [ "a", "b", "c", "d" ]
+a.fill("x") 	
+=>["x", "x", "x", "x"]
+
+a.fill("z", 2, 2) 
+=> ["x", "x", "z", "z"]
+
+a.fill("y", 0..1)
+=> ["y", "y", "z", "z"]
+
+first - tablica.first - zwraca pierwszy element tablicy, jeśli tablica jest pusta zwraca nil.
+a = [ "q", "r", "s", "t" ]
+a.first
+=> "q"
+
