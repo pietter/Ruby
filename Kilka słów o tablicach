@@ -1,0 +1,20 @@
+Tablice są numerowane od zera, podobnie jak w C albo w Javie. 
+Ujemny indeks oznacza pozycję od końca tablicy tj. 
+pole z indeksem -1 będzie oznaczało ostatnie pole w tablicy,
+ -2 przedostatnie i tak dalej.
+
+
+Metody które możemy stosować przy tablicach:
+[ ] – nawiasy kwadratowe. Pozwalają wypełnić nowo powstałą tablicę konkretnymi wartościami, 
+na przykład:
+
+Array.[]( 1, 'a', /^A/ )
+>>[1, "a", /^A/]
+
+Jak widzimy tablice nie muszą przechowywać tylko jednego typu danych. Każde pole może być innego typu.
+Tą samą operację możemy zapisać również jako:
+Array[ 1, 'a', /^A/ ]
+
+Nie musimy nawet używać jakby się wydawało kluczowego słówka "Array"
+
+[ 1, 'a', /^A/ ]
