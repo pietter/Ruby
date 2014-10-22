@@ -46,3 +46,28 @@ Operacje na tablicach
 * - tablica * napis - zwraca tablicę w której między polami oryginalnej został dodany podany napis.
 [1,2,3,4,5] * test
 => "1test2test3test4test5"
+
++ - tablica1+tablica2 - dodaje ze sobą dwie tablice i tworzy nową.
+[1,2,3] + [5,6]
+=> [1,2,3,5,6]
+
+- - tablica1 - tablica 2 - odejmuje od pierwszej tablicy drugą i tworzy nową.
+[1,2,3,5,6] - [1,2,3]
+=> [5,6]
+
+<< - tablica1 << obiekt - dodaje na końcu tablicy podany obiekt i tworzy nową tablicę, dlatego tą operację można wykonać wielokrotnie.
+[1,2,3] << "c" << "a" << [5,6]
+=> [1,2,3,c,a,5,6]
+
+<=> - tablica1 <=> tablica2 - zwraca wartość -1,0 lub 1 jeśli: pierwsza tablica jest mniejsza, są równe, albo pierwsza jest większa.
+[1,2,3] <=> [1,2]
+=> 1
+
+[1,2] <=> [1,2,3]
+=> -1
+
+[1,2,3] <=> [1,2,3]
+=>0
+
+
+
