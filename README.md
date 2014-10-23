@@ -1,4 +1,0 @@
-Ruby
-====
-
-Testowanie w ruby
