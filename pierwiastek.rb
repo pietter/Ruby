@@ -1,3 +1,5 @@
+#skrypt zrealizowany w oparciu na silnia.rb
+
 def pierwiastek(n)
   if n < 0
   system "clear"
