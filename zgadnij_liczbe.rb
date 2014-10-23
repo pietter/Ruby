@@ -1,5 +1,5 @@
 los =[rand(100)]
-puts los
+#puts los
 print "zgadnij jaka liczbe mam na mysli (0-99)?   "
 while liczba = gets.chop!.to_i
 
