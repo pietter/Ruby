@@ -1,3 +1,5 @@
+#zadanie zrealizowane na podstawie zgadnij_liczbe.rb
+#----------------------------------------------------------------------------------------------------------------
 slowa = ['wiosna', 'lato', 'jesien', 'zima']
 sekret = slowa[rand(4)]
 print "zgadnij jaka pore roku mam na mysli?   "
