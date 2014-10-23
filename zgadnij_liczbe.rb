@@ -23,3 +23,29 @@ end
 
 print "Chodzilo o ", los.first, "."
 puts 
+
+----------------------------------------------------------------------------------------------------------------
+PODOBNY PROGRAM NAPISANY W C
+----------------------------------------------------------------------------------------------------------------
+#include <iostream>
+#include <stdlib.h>
+
+using namespace std;
+
+int main()
+{
+    srand( time( 0 ) );
+    int i = 0;
+    int e = 0;
+    i = rand() % 100;
+    do {
+        cout << "Jaka to liczba? >>  ";
+        cin >> e;
+        if( e = i ) { cout << "Tak! To ta liczba!" << endl; }
+        if( e < i ) { cout << "Za malo!"; }
+        if( e > i ) { cout << "Za duzo!"; }
+    } while( e != i );
+   
+   
+    return 0;
+}
