@@ -1,3 +1,4 @@
+#nr indeksu 215586
 los =[rand(100)]
 #puts los
 print "zgadnij jaka liczbe mam na mysli (0-99)?   "
