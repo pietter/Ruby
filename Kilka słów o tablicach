@@ -336,7 +336,7 @@ a.indexes(0, 2, 4, 12)
 [ 1, nil, 3, nil, 5 ].nitems
 => 3
 #----------------------------------------------------------------------------------------------------------------
-#pop 	tablica.pop - usuwa i zwraca ostatni element tablicy. Zwraca nil jeśli tablica była pusta.
+#pop -	tablica.pop - usuwa i zwraca ostatni element tablicy. Zwraca nil jeśli tablica była pusta.
 a = [ "a", "m", "z" ]
 a.pop 	
 => "z"
@@ -426,7 +426,7 @@ a = [ "a", "a", "b", "b", "c" ]
 a.uniq 	
 => ["a", "b", "c"]
 #----------------------------------------------------------------------------------------------------------------
-#uniq! -	tablica.uniq! - to samo co uniq, ale operuje na obecnej tablicy. Zwraca nil jeśli nie dokonano zmian
+#uniq! - tablica.uniq! - to samo co uniq, ale operuje na obecnej tablicy. Zwraca nil jeśli nie dokonano zmian
 #(nie było duplikatów w tablicy).
 a = [ "a", "a", "b", "b", "c" ]
 a.uniq! 	
@@ -436,7 +436,7 @@ b = [ "a", "b", "c" ]
 b.uniq!
 => nil
 #----------------------------------------------------------------------------------------------------------------
-#unshift -	tablica.unshift(obiekt) - dodaje obiekt na początku tablicy reszte elementów przesuwając o jeden.
+#unshift - tablica.unshift(obiekt) - dodaje obiekt na początku tablicy reszte elementów przesuwając o jeden.
 a = [ "b", "c", "d" ]
 a.unshift("a") 	
 => ["a", "b", "c", "d"]
