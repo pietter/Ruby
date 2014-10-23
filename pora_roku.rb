@@ -11,5 +11,5 @@ while odp = gets.chop!
 	print "zgadnij? "
 end
 
-puts "Chodzilo o ", sekret, "."
-
+print "Chodzilo o ", sekret, "!"
+puts
